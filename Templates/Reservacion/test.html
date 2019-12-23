@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="row">
+		<a href="{% url 'boton' cambio=0 %}" class="btn btn-default col-3">Boton 1</a>
+		<a href="{% url 'boton' cambio=1 %}" class="btn btn-primary col-3">Boton 2</a>
+		<a href="{% url 'boton' cambio=2 %}" class="btn btn-danger col-3">Boton 3</a>
+	</div>
+</div>
+
+{% if cambio == 0 %}
+	<h1>
+		Hola David
+	</h1>
+{% elif cambio == 1 %}
+	<h1>
+		Hola Carlos
+	</h1>
+{% elif cambio == 2 %}
+	<h1>
+		Hola David
+	</h1>
+{% else %}
+	<h1>No hay cambios</h1>
+{% endif %}

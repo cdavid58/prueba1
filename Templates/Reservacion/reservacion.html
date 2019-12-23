@@ -1,0 +1,49 @@
+{% extends '../Shared/plantillas.html' %}
+
+{% block contenido %}
+<style>
+	.servi{
+		margin-top: 20px; 
+	}
+	table{width: 100%;
+		   height: auto;
+		}
+</style>
+
+<div class="servi">
+	<div class="container">
+		<div class="dropdown">
+		  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    Cortes
+		  </button>
+		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+		  	<div style="width: 900px; height: auto;">
+			    <table class="table table-dark">
+				  <thead>
+				    <tr>
+				      <th scope="col">#</th>
+				      <th scope="col">Tipos de Servicio</th>
+				      <th scope="col">Costo</th>
+				      <th scope="col">Reservar</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  	{% for o in obj %}
+					    <tr>
+					      <th scope="row">{{o.id}}</th>
+					      <td>{{o.nombre}}</td>
+					      <td>{{o.precio}}</td>
+					      <td><a href="" class="btn btn-primary">Reservacion</a></td>
+					    </tr>
+					{% endfor %}
+				  </tbody>
+				</table>
+			</div>
+		  </div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
+

@@ -1,0 +1,38 @@
+{% extends '../Shared/plantillas.html' %}
+
+
+{% block contenido %}
+
+<style>
+	.contenedor{
+		width: 500px;
+		height: auto;
+		margin-top: 15px;		
+		padding: 10px;
+	}
+	.img-fluid{
+		width: 100%;
+		height: auto;
+	}
+	.descripcion{
+		/*border: 1px solid rgba(0,0,0,5);
+		border-radius: 10px;*/
+		width: 600px;
+		height: 200px;
+	}
+</style>
+	
+<center>
+	<div class="contenedor">
+		<img src="{{ obj.imagen.url }}" class="img-fluid">
+	</div><br><br>
+	<h1>{{obj.nombre}}</h1><br><br>
+	<div class="container descripcion">
+		<div class="row">
+			<h5>Descripción:&nbsp;</h5>
+			<p>{{obj.descripcion}}</p>
+		</div>
+	</div>
+</center>
+	
+{% endblock %}

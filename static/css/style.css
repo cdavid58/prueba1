@@ -1,0 +1,22 @@
+body{height: 1000px;}
+
+.btn-whatsapp {
+        display:block;
+        width:70px;
+        height:70px;
+        color:#fff;
+        position: fixed;
+        right:20px;
+        bottom:20px;
+        border-radius:50%;
+        line-height:80px;
+        text-align:center;
+        z-index:999;       
+}
+
+#encabezado
+{
+        padding:20px 20px 2px 20px;
+        text-align: center;
+}
+#subEncabezado{text-align: center;}

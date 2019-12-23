@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="row justify-content-center" style="margin-left: 20px;">
+		{% for o in obj %}
+			<div class="col-6">
+				<div class="card" style="width: 18rem;border-radius: 10px;">
+					<div>
+				  		<img style="width: 286px; height: 214.85px;" src="{{o.imagen.url}}" class="card-img-top img-thumbnail" alt="...">
+				  	</div>
+				  <div class="card-body">
+				    <h5 class="card-title">{{o.nombre}}</h5>
+				    <p class="card-text">{{o.descripcion|truncatechars:50}}.</p>
+				    <a href="{% url 'servicio' pk=o.id %}" class="btn btn-primary">Leer Más</a>
+				  </div>
+				</div>
+				<br><br>
+			</div>
+		{% endfor %}
+	</div>
+</div>
+<br><br><br><br>
